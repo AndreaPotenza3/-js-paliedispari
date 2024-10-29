@@ -11,10 +11,25 @@ const pcNumber = getRandomIntInclusive(1, 5)
 console.log(pcNumber)
 
 const somma = userNumber + pcNumber
-//console.log(pcNumber)
+console.log(somma)
+
+if (somma % 2 === 0 && userChoice === 'Pari') {
+    console.log('hai vinto')
+
+}else if (somma % 2 === 0 && userChoice !== 'Pari'){
+    console.log('Il pc ha vinto')
+
+}else if (somma % 2 !== 0 && userChoice === 'Pari'){
+    console.log('Il pc ha vinto')
+
+}else if (somma % 2 !== 0 && userChoice !== 'Pari'){
+    console.log('Hai vinto')
+}
+//FUNZIONI
 
 function getRandomIntInclusive(min, max) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
+
